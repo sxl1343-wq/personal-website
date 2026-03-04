@@ -177,10 +177,9 @@ body {
 }
 
 .profile-pic {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
     border: 6px solid rgba(255, 255, 255, 0.8);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
@@ -337,23 +336,14 @@ body {
 
 /* Lists */
 .styled-list {
-    list-style-type: none;
-    padding-left: 20px;
+    list-style-type: disc;
+    padding-left: 30px;
 }
 
 .styled-list li {
-    position: relative;
     margin-bottom: 15px;
     font-size: 1.05rem;
     color: var(--text-primary);
-}
-
-.styled-list li::before {
-    content: '🌸';
-    position: absolute;
-    left: -25px;
-    top: 2px;
-    font-size: 0.9rem;
 }
 
 /* Footer */
