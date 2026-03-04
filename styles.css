@@ -93,8 +93,8 @@ body {
 /* Top Banner Image */
 .top-banner {
     width: 100vw;
-    height: 350px;
-    /* Adjust height based on preference */
+    height: 175px;
+    /* Half of 350px */
     overflow: hidden;
     position: relative;
     /* Negative margin to counteract the body and padding */
@@ -363,31 +363,41 @@ body {
     color: var(--text-primary);
 }
 
-/* Publications */
+/* Publications matching Wix Theme */
+.publication-list {
+    font-family: var(--font-sans);
+}
+
 .pub-item {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .pub-item:last-child {
     margin-bottom: 0;
 }
 
+/* Wixstyle bold title */
 .pub-title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 4px;
+    color: #4a4a4a;
+    /* Wix signature dark grey for headers */
+    margin-bottom: 0px;
+    line-height: 1.4;
 }
 
+/* Author string */
 .pub-authors {
-    font-size: 1.05rem;
-    color: var(--text-secondary);
-    margin-bottom: 2px;
+    font-size: 0.95rem;
+    color: #666666;
+    /* Slightly softer wix grey */
+    margin-bottom: 0px;
 }
 
+/* Journal string */
 .pub-journal {
-    font-size: 1.05rem;
-    color: var(--text-secondary);
+    font-size: 0.95rem;
+    color: #666666;
 }
 
 /* Others Section Image & Text */
@@ -421,25 +431,49 @@ body {
 .dynamic-text {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: var(--font-serif);
-    font-size: 4rem;
+    transform: translateY(-50%);
+    font-family: var(--font-sans);
+    font-size: 2.5rem;
+    /* Smaller size */
     font-weight: 600;
     color: white;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     pointer-events: none;
     /* Let clicks pass through if needed */
-    text-align: center;
-    width: 100%;
     letter-spacing: 2px;
     opacity: 0.9;
-    transition: all 0.5s ease;
+    white-space: nowrap;
+
+    /* Center it normally */
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .image-wrapper:hover .dynamic-text {
-    transform: translate(-50%, -50%) scale(1.05);
-    opacity: 1;
+    /* Slide in flash animation on hover */
+    animation: flash-slide 1.5s ease-out forwards;
+}
+
+@keyframes flash-slide {
+    0% {
+        left: 100%;
+        opacity: 0;
+        transform: translate(0, -50%);
+    }
+
+    40% {
+        left: 50%;
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        left: 50%;
+        opacity: 0.9;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        transform: translate(-50%, -50%);
+    }
 }
 
 /* Footer */
