@@ -177,8 +177,8 @@ body {
 }
 
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid rgba(255, 255, 255, 0.8);
@@ -333,6 +333,27 @@ body {
 
 .pdf-container object {
     border-radius: 8px;
+}
+
+/* Lists */
+.styled-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.styled-list li {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+}
+
+.styled-list li::before {
+    content: '🌸';
+    position: absolute;
+    left: -25px;
+    top: 2px;
+    font-size: 0.9rem;
 }
 
 /* Footer */
