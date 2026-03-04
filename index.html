@@ -39,7 +39,7 @@
     </header>
 
     <main class="page-content">
-        <div class="profile-section">
+        <div class="profile-section" id="home">
             <div class="profile-header">
                 <img src="ShuyuLi.jpg" alt="Shuyu Li" class="profile-pic">
                 <div class="profile-titles">
@@ -67,9 +67,20 @@
                 </div>
 
                 <!-- Cute button styling for the CV -->
-                <a href="#" class="btn-cv" target="_blank">
-                    <i class="fa-regular fa-file-pdf"></i> Download CV
+                <a href="#cv" class="btn-cv">
+                    <i class="fa-regular fa-file-pdf"></i> View CV
                 </a>
+            </div>
+        </div>
+
+        <!-- Embedded CV Section -->
+        <div id="cv" class="cv-section">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <div class="pdf-container box-glass">
+                <object data="Shuyu_Li_CV.pdf" type="application/pdf" width="100%" height="100%">
+                    <p>It appears your web browser doesn't support embedding PDFs. <a href="Shuyu_Li_CV.pdf"
+                            target="_blank">Click here to download the PDF file.</a></p>
+                </object>
             </div>
         </div>
     </main>

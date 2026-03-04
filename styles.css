@@ -157,7 +157,8 @@ body {
 .page-content {
     flex: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 80px 20px;
 }
 
@@ -306,6 +307,32 @@ body {
     color: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(255, 183, 178, 0.2);
+}
+
+/* CV Section */
+.cv-section {
+    max-width: 900px;
+    width: 100%;
+    margin: 80px auto 0;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.pdf-container {
+    height: 800px;
+    padding: 20px;
+    width: 100%;
+}
+
+.pdf-container object {
+    border-radius: 8px;
 }
 
 /* Footer */
