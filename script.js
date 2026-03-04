@@ -10,18 +10,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Simple smooth scroll for nav links (if any anchor tags are used later)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+    // Single Page Application (SPA) Tab Navigation
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const pageSections = document.querySelectorAll('.page-section');
 
-            const targetElement = document.querySelector(targetId);
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            
+            // Allow outside links like CV to work normally
+            if (!targetId.startsWith('#') && targetId !== 'index.html') {
+                return; 
+            }
+            
+            e.preventDefault();
+
+            // Determine which section to show (index.html maps to #home)
+            const targetElementId = targetId === 'index.html' ? '#home' : targetId;
+            const targetElement = document.querySelector(targetElementId);
+
             if (targetElement) {
-                e.preventDefault();
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                // Update active state on nav links
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+
+                // Hide all sections, show target section
+                pageSections.forEach(section => section.classList.remove('active-section'));
+                targetElement.classList.add('active-section');
+                
+                // Jump to top of the page nicely
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
     });

@@ -197,6 +197,8 @@ body {
     width: 260px;
     height: 320px;
     object-fit: cover;
+    object-position: center 10%;
+    /* Crops slightly closer to the top/face */
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
@@ -376,10 +378,12 @@ body {
     margin-bottom: 0;
 }
 
-/* Wixstyle bold title */
+/* Wixstyle bold title, user requested italic and underline and bigger */
 .pub-title {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 600;
+    font-style: italic;
+    text-decoration: underline;
     color: #4a4a4a;
     /* Wix signature dark grey for headers */
     margin-bottom: 0px;
@@ -433,8 +437,8 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-family: var(--font-sans);
-    font-size: 2.5rem;
-    /* Smaller size */
+    font-size: 4rem;
+    /* Larger size */
     font-weight: 600;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
