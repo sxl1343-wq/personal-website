@@ -5,19 +5,20 @@
     --text-primary: #333333;
     --text-secondary: #666666;
     --border-light: #eaeaea;
-    
+
     /* Subtle pastel cute accents */
-    --accent-color: #ffb7b2; /* Soft Peach/Pink */
+    --accent-color: #ffb7b2;
+    /* Soft Peach/Pink */
     --accent-hover: #ff9d96;
     --accent-light: #fff0f0;
-    
+
     --link-color: #555555;
     --link-hover: #ffb7b2;
 
     /* Fonts */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-serif: 'Lora', Georgia, serif;
-    
+
     --transition: all 0.3s ease;
 }
 
@@ -52,7 +53,8 @@ body {
 .bg-accent-1 {
     width: 600px;
     height: 600px;
-    background: #ffecf0; /* Soft blush */
+    background: #ffecf0;
+    /* Soft blush */
     top: -200px;
     right: -200px;
 }
@@ -60,15 +62,21 @@ body {
 .bg-accent-2 {
     width: 500px;
     height: 500px;
-    background: #f0f4ff; /* Soft baby blue */
+    background: #f0f4ff;
+    /* Soft baby blue */
     bottom: -150px;
     left: -150px;
     animation-direction: alternate-reverse;
 }
 
 @keyframes drift {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(30px, 40px); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(30px, 40px);
+    }
 }
 
 /* Glassmorphism utility for sections */
@@ -92,7 +100,8 @@ body {
     z-index: 100;
     border-bottom: 1px solid var(--border-light);
     display: flex;
-    justify-content: flex-end; /* Align right like the template */
+    justify-content: flex-end;
+    /* Align right like the template */
     padding: 24px 60px;
     transition: var(--transition);
 }
@@ -138,7 +147,11 @@ body {
     width: 100%;
 }
 
-.more-dropdown a::after { display: none; } /* Remove underline from dropdown trigger */
+.more-dropdown a::after {
+    display: none;
+}
+
+/* Remove underline from dropdown trigger */
 
 /* Main Content Layout */
 .page-content {
@@ -155,6 +168,28 @@ body {
 }
 
 /* Typography Overrides for Academic Look */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+.profile-pic:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-color);
+}
+
 .profile-section .name {
     font-family: var(--font-serif);
     font-size: 3.5rem;
@@ -258,10 +293,11 @@ body {
     color: var(--text-primary);
     text-decoration: none;
     border: 1px solid var(--border-light);
-    border-radius: 30px; /* Cute rounded pill shape */
+    border-radius: 30px;
+    /* Cute rounded pill shape */
     font-size: 0.95rem;
     font-weight: 500;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     transition: var(--transition);
 }
 
@@ -282,21 +318,26 @@ body {
 
 /* Responsive Layout */
 @media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .site-header {
         padding: 20px;
         justify-content: center;
     }
-    
+
     .navbar .nav-links {
         gap: 1.5rem;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .profile-section .name {
         font-size: 2.8rem;
     }
-    
+
     .box-glass {
         padding: 30px 20px;
     }
