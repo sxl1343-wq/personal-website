@@ -3,83 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuyu Li | Personal Website</title>
+    <title>Home | Shuyu Li</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Using a clean sans-serif mixed with serif for an elegant aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for cute/professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">SL.</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact" class="btn-contact">Say Hi!</a></li>
-        </ul>
-    </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <span class="greeting">Hello there! 👋</span>
-            <h1>I'm <strong>Shuyu Li</strong></h1>
-            <p>Welcome to my digital space. I create cool, professional, and cute experiences.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#about" class="btn secondary">More About Me</a>
+    <!-- Soft, pastel geometric accent in the background -->
+    <div class="bg-accent bg-accent-1"></div>
+    <div class="bg-accent bg-accent-2"></div>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <!-- Navigation Links mimicking the template -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#cv">Curriculum Vitae</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#others">Others</a></li>
+                <li class="more-dropdown">
+                    <a href="#more">More <i class="fa-solid fa-chevron-down"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="profile-section">
+            <h1 class="name">Shuyu Li</h1>
+            <h2 class="title">Senior Lecturer</h2>
+            <h3 class="department">Department of Economics</h3>
+            <h3 class="university">University of Melbourne</h3>
+
+            <div class="bio-text">
+                <p>
+                    My research interests include Industrial Organization, Applied Microeconomics, Applied Econometrics, and Competition and Antitrust Policy.
+                </p>
+            </div>
+
+            <div class="contact-info box-glass">
+                <p class="contact-heading">Contact information</p>
+                <div class="contact-details">
+                    <p>Department of Economics | Faculty of Business & Economics</p>
+                    <p>Room 320, Level 3, 111 Barry Street, Carlton</p>
+                    <p>University of Melbourne, Victoria 3010 Australia</p>
+                    <p>email: <a href="mailto:shuyu.li@example.com" class="email-link">shuyu.li@example.com</a></p>
+                </div>
+                
+                <!-- Cute button styling for the CV -->
+                <a href="#" class="btn-cv" target="_blank">
+                    <i class="fa-regular fa-file-pdf"></i> Download CV
+                </a>
             </div>
         </div>
-        <div class="hero-graphics">
-            <div class="blob shape-1"></div>
-            <div class="blob shape-2"></div>
-        </div>
-    </section>
+    </main>
 
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="about-container glass">
-            <p>I am passionate about building beautiful and functional applications. I love pastel colors, smooth animations, and writing clean code! 🌸✨</p>
-            <div class="skills-grid">
-                <span class="skill-tag">Web Design</span>
-                <span class="skill-tag">Development</span>
-                <span class="skill-tag">UI / UX</span>
-                <span class="skill-tag">Creativity</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card glass">
-                <div class="project-img-placeholder">Project 1</div>
-                <h3>Project Title</h3>
-                <p>A cute and professional project highlighting my design skills.</p>
-            </div>
-            <div class="project-card glass">
-                <div class="project-img-placeholder">Project 2</div>
-                <h3>Another Awesome Idea</h3>
-                <p>Building interactive experiences with modern web technologies.</p>
-            </div>
-            <div class="project-card glass">
-                <div class="project-img-placeholder">Project 3</div>
-                <h3>Creative Design</h3>
-                <p>An exploration of aesthetic UI components and animations.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="contact-box glass">
-            <h2>Let's Connect! 🌟</h2>
-            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-            <a href="mailto:hello@example.com" class="btn primary">Send me an Email</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Shuyu Li. Built with 💖</p>
+    <footer class="site-footer">
+        <p>© 2026 by Shuyu Li. Built with 🌸 and clean code.</p>
     </footer>
 
     <script src="script.js"></script>
