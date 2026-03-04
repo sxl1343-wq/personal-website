@@ -170,6 +170,16 @@ body {
 
 /* Remove underline from dropdown trigger */
 
+/* Section visibility: only .active-section is shown */
+.page-section {
+    display: none;
+    width: 100%;
+}
+
+.page-section.active-section {
+    display: block;
+}
+
 /* Main Content Layout */
 .page-content {
     flex: 1;
@@ -197,8 +207,8 @@ body {
     width: 260px;
     height: 320px;
     object-fit: cover;
-    object-position: center 10%;
-    /* Crops slightly closer to the top/face */
+    object-position: center top;
+    /* Crops tightly to face/upper body */
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
@@ -380,12 +390,11 @@ body {
 
 /* Wixstyle bold title, user requested italic and underline and bigger */
 .pub-title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 600;
     font-style: italic;
     text-decoration: underline;
     color: #4a4a4a;
-    /* Wix signature dark grey for headers */
     margin-bottom: 0px;
     line-height: 1.4;
 }
@@ -402,6 +411,7 @@ body {
 .pub-journal {
     font-size: 0.95rem;
     color: #666666;
+    font-style: italic;
 }
 
 /* Others Section Image & Text */
@@ -437,15 +447,15 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-family: var(--font-sans);
-    font-size: 4rem;
-    /* Larger size */
-    font-weight: 600;
+    font-size: 5rem;
+    /* Large flash text */
+    font-weight: 700;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
     pointer-events: none;
     /* Let clicks pass through if needed */
-    letter-spacing: 2px;
-    opacity: 0.9;
+    letter-spacing: 4px;
+    opacity: 0.95;
     white-space: nowrap;
 
     /* Center it normally */

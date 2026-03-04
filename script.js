@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            
+
             // Allow outside links like CV to work normally
             if (!targetId.startsWith('#') && targetId !== 'index.html') {
-                return; 
+                return;
             }
-            
+
             e.preventDefault();
 
             // Determine which section to show (index.html maps to #home)
@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Hide all sections, show target section
                 pageSections.forEach(section => section.classList.remove('active-section'));
                 targetElement.classList.add('active-section');
-                
-                // Jump to top of the page nicely
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                // Instantly jump to top so no scroll motion is visible
+                window.scrollTo({ top: 0, behavior: 'instant' });
             }
         });
     });
